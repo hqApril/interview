@@ -459,5 +459,105 @@
      console.log(sum); // 6
      ```
 
-     
+16. 什么是事件委托
 
+     由于给页面上过多的dom节点挂载事件处理程序会导致页面性能的下降，所以可以用事件委托的方式达到性能优化的目的，其原理是利用事件冒泡的特性，把事件处理程序挂载到层级尽可能高的dom节点上，从而处理相应的事件；
+
+17. 什么是AOP
+
+     AOP 就是 Aspect Oriented Programming 的 缩写，也就是 面向切面编程；是函数式编程的衍生范式；主要作用是把一些跟核心业务无关的功能与模块抽离出来，例如日志统计，安全控制，异常处理等；把这些功能抽离出来之后，再通过动态植入的方式掺入业务模块中；达到降低代码耦合度的需求；
+
+18. 关于事件绑定
+
+     事件绑定有两种方式，分别是主流浏览器的addEventListener和ie的attachEvent
+
+     ```javascript
+     var el = document.getElementById('root');
+     var func = function () {};
+     
+     // 第三个参数，默认false，false为事件冒泡，true为事件捕获
+     el.addEventListener('click', func, false);
+     
+     el.removeEventListener('click', func);
+     ```
+
+     ```javascript
+     var el = document.getElementById('root');
+     var func = function () {};
+     
+     // attachEvent只支持事件冒泡
+     el.attachEvent('onclick', func);
+     el.detachEvent('onclick', func);
+     ```
+
+19. 阻止事件冒泡
+
+     `stopPropagation()`和`stopImmediapropagation()`都可以阻止事件的冒泡，不过`stopPropagation`还可以阻止目标执行别的注册事件
+
+     ```javascript
+     // 阻止事件冒泡
+     // 不阻止事件冒泡的时候，window的click会触发
+     // 使用stopPropagation时，window的click不会触发
+     // 使用stopImmediaPropagation时，dom的捕获事件不会触发，window的click不会触发
+     var el = document.getElementById('el');
+     
+     el.addEventListener('click', function (e) {
+         console.log('冒泡时触发');
+         
+     	// e.stopPropagation();
+         // e.stopImmediaPropagation();
+     });
+     
+     el.addEventListener('click', function (e) {
+         console.log('捕获时触发');
+     }, true);
+     
+     window.addEventListener('click', function (e) {
+         console.log('向上冒泡时触发');
+     });
+     ```
+
+20. 什么是同源策略
+
+     同源策略是指，一个源的客户端脚本在没用明确授权的情况下，不能够访问另一个源的客户端脚本。两个url之间，只要协议、域名、端口号有一个不同，就会出现跨域；
+
+     不同源受到的限制
+
+     * 无法读取cookie
+     * 无法获取dom
+     * 无法发送ajax请求
+
+     实现跨域的几种方式
+
+     * jsonp
+     * CORS
+     * document.domain
+     * postMessage
+
+21. 关于cookie
+
+     ```javascript
+     // 设置cookie
+     function setCookie(cname, cvalue, exdays) {
+     	var d = new Date();
+         d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+         var expires = "expires=" + d.toUTCString();
+         
+         document.cookie = cname + '=' + cvalue + '; ' + expires;
+     }
+     ```
+
+     ```javascript
+     // 获取cookie
+     function getCookie(name) {
+         var arr = document.cookie.match(new RegExp('(^| )' + name + '=([^;]*)(;|$)'));
+         
+         if (arr) {
+             return unescape(arr[2]);
+         }
+         
+         return null;
+     }
+     ```
+
+     

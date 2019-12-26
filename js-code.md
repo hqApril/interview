@@ -486,7 +486,7 @@
              return sum;
          };
          
-         return _adder;
+         return adder;
      }
      
      console.log(add(1)(2)(3)); // 6

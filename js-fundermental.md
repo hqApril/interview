@@ -560,4 +560,12 @@
      }
      ```
 
-     
+22. 关于`localStorage`和`sessionStorage`
+
+     localStorage和sessionStorage都是用来存储客户端临时信息的对象，他们均只能存储字符串类型的对象，且均是以kv的形式存储的；
+
+     localStorage的生命周期是永久的，这意味着除非用户主动清除localStorage信息，否则这些信息将会永远存在；
+
+     sessionStorage的生命周期是在当前窗口或标签存在的这段时间，一旦窗口或标签被关闭，那么所有的sessionStorage储存的数据也将会被清空；
+
+     不同的浏览器无法共享localStorage和sessionStorage，相同浏览器的同源页面可以共享相同的localStorage，但是不同页面或标签无法共享sessionStorage；这里的页面及标签指的是顶级窗口，如果一个标签页包含多个iframe标签，那么他们属于同源页面，那么他们之间可以共享sessionStorage；

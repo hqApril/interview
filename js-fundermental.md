@@ -569,3 +569,10 @@
      sessionStorage的生命周期是在当前窗口或标签存在的这段时间，一旦窗口或标签被关闭，那么所有的sessionStorage储存的数据也将会被清空；
 
      不同的浏览器无法共享localStorage和sessionStorage，相同浏览器的同源页面可以共享相同的localStorage，但是不同页面或标签无法共享sessionStorage；这里的页面及标签指的是顶级窗口，如果一个标签页包含多个iframe标签，那么他们属于同源页面，那么他们之间可以共享sessionStorage；
+    
+23. new运算符执行过程
+
+     * 新生成一个对象
+     * 链接到原型：obj.__proto__ = Con.prototype
+     * 绑定this： apply
+     * 返回新对象

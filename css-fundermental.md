@@ -364,4 +364,84 @@
      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
      ```
 
-     
+22. 理解line-height
+
+     行高是指一行文字的高度，具体说是两行文字间基线的距离；css中起高度作用的是height和line-height，没有定义height属性，最终其表现作用的一定是line-height 属性；
+
+     单行文本居中，设置line-height值与height值一致；
+
+     多行文本居中，需要设置display属性为inline-block;
+
+23. 如何让chrome支持12px以下的字体
+
+     设置 `transform: scale(.8)`缩放字体
+
+24. 如何让页面里的字体变清晰变细
+
+     `-webkit-font-smoothing: antialiased`可以在ios上起到平滑字体的作用，windows下无效；
+
+25. position: fixed 在安卓下无效怎么处理
+
+     携带响应式布局的头
+
+     ```html
+     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+     ```
+
+26. 如果手动写动画，你认为最小时间间隔是多久，为什么
+
+     多数显示器默认频率是60HZ，所以理论上最小时间间隔为1/60s=16.7ms;
+
+27. 图片格式区别
+
+     > **png**
+     >
+     > Protable Netword Graphics，一种无损数据压缩格式，压缩比高，色彩好，大部分地方都可以使用，保存透明通道；
+     >
+     > **jpg**
+     >
+     > 一种针对相片使用的失真压缩方法，是一种破坏性压缩，在色调及颜色平滑上做得不错，不存储透明通道；
+     >
+     > **gif**
+     >
+     > 以8位色重现真色彩的图像，可以保留多帧做动态图，色彩差，压缩性差；
+     >
+     > **webp**
+     >
+     > 谷歌推出的一种图片格式，同时提供有损和无损压缩格式，支持透明通道，压缩率只有jpg的2/3，大小比png小45%；缺点是压缩的时间更久，兼容性差；
+
+28. 关于行内元素和块级元素和行级块元素
+
+     > **行内元素**
+     >
+     > a、em、i、b、span、font、strong、big、input、textarea、img等等
+     >
+     > **块级元素**
+     >
+     > div、p、h1~h6、ul、ol、li、table、dd、hr、header、section、aside、footer等等
+     >
+     > **行级块元素**
+     >
+     > select、button
+
+29. nth-of-type 和 nth-child 区别
+
+     li:nth-of-type(2) 是指父元素的第二个li元素
+
+     li:nth-child(2) 是指父元素下的第二个元素且必须是li的元素（很容易找不到）
+
+30. css2.0和css3.0区别
+
+     css3加强了css2的功能，增加了许多新的属性和新的标签，并删除了一些冗余的标签，在布局方面减少了代码量，也增加了更多的效果（圆角、动画之类的）还有在盒子模型和列表模块都进行了改进；
+
+31. 如何理解标签语义化
+
+     标签语义化就是指标签的含义；语义化的主要目的就是让大家更直观地认识标签和属性地作用；主要目的是对搜索引擎更加友好，有了良好地结构和语义，我们地网页内容更容易被搜索引擎抓取，更方便网站的推广；而且可维护性高，且容易阅读；
+
+     常见语义化标签
+
+     title、h1~h6、p、ul、li、ol
+
+     header、nav、footer、article、main、section、aside（html5新增）
+
+     等等等等

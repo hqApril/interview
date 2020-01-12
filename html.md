@@ -68,4 +68,11 @@
     > 渐进增强则认为应关注内容本身；
     >
     > 内容是我们建立网站的诱因；有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同的观点是它们全都涉及到内容；这使得渐进增强成为了以各种更为合理的设计范例；
+    
+10. 常见浏览器及其内核
 
+    * IE，trident
+    * chrome，以前webkit，现在是blink，blink也是webkit衍生来的
+    * safari，webkit内核
+    * firefox，gecko
+    * opera，presto，后面改成webkit，现在用blink

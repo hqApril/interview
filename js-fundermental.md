@@ -576,3 +576,17 @@
      * 链接到原型：obj.__proto__ = Con.prototype
      * 绑定this： apply
      * 返回新对象
+    
+24. 严格模式特性
+
+     * 不可以使用with
+     * 变量必须声明
+     * 默认的this是undefined
+     * 不能为只读变量和不可扩展的对象赋值
+     * 不能在eval函数的参数中定义变量和函数
+     * 不能用delete去删除var声明的变量和不可配置的属性，否则会报错
+     * 不能修改arguments和eval变量
+     * 不能用八进制
+     * 函数的形参不可以同名
+     * 不可以使用caller和arguments的属性
+

@@ -1,6 +1,6 @@
 1. html5新特性
 
-    * html5现在已经不是SGML的自己了，主要是关于图像、位置、存储、多任务等功能的增加；
+    * html5现在已经不是SGML的子集了，主要是关于图像、位置、存储、多任务等功能的增加；
     * 拖拽释放api
     * 语义化更好的内容标签 header、footer、nav、article、aside、section等等
     * 音视频api audio、video
@@ -22,20 +22,20 @@
 
 4. meta标签的name属性
 
-5. name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的；
+    name属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的；
 
     * name为keywords：keywords用来告诉搜索引擎你网页的关键字是什么；
     * name为description：description用来告诉搜索引擎网页的内容是什么；
     * name为robots：robots用来告诉搜索机器人哪些页面需要爬取，哪些页面不需要；
 
-6. a标签中 active hover link visited 正确设置顺序是什么
+5. a标签中 active hover link visited 正确设置顺序是什么
 
     1. a:link
     2. a:visited
     3. a:hover
     4. a:active
 
-7. 手机端，图片长时间点击会选中图片，怎么处理
+6. 手机端，图片长时间点击会选中图片，怎么处理
 
     ```javascript
     img.onselect = function () {
@@ -43,11 +43,11 @@
     };
     ```
 
-8. canvas在标签上设置width和height 和在style中设置宽高有什么区别
+7. canvas在标签上设置width和height 和在style中设置宽高有什么区别
 
     在标签上设置width和height是画布的实际宽度和高度，而在style中设置的宽高是canvas在页面上被渲染的高度和宽度；如果canvas的width和height没有被指定或值不正确，就会被设置成默认值（300x150）；
 
-9. 关于渐进增强和优雅降级
+8. 关于渐进增强和优雅降级
 
     > **渐进增强 progressive enhancement**
     >
@@ -68,8 +68,8 @@
     > 渐进增强则认为应关注内容本身；
     >
     > 内容是我们建立网站的诱因；有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同的观点是它们全都涉及到内容；这使得渐进增强成为了以各种更为合理的设计范例；
-    
-10. 常见浏览器及其内核
+
+9. 常见浏览器及其内核
 
     * IE，trident
     * chrome，以前webkit，现在是blink，blink也是webkit衍生来的

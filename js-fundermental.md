@@ -105,7 +105,7 @@
     
 6. 关于 == 和 ===
 
-    == 比较预算符会先转换操作数，然后再进行比较。
+    == 比较运算符会先转换操作数，然后再进行比较。
 
     * 如果有一个操作数是布尔值，则会先将该值转换为数字 -- false为0，true为1
     * 如果有一个操作数是字符串，另一个是数字，则会先将字符串转换为数字
@@ -492,7 +492,7 @@
 
 19. 阻止事件冒泡
 
-     `stopPropagation()`和`stopImmediapropagation()`都可以阻止事件的冒泡，不过`stopPropagation`还可以阻止目标执行别的注册事件
+     `stopPropagation()`和`stopImmediaPropagation()`都可以阻止事件的冒泡，不过`stopImmediaPropagation`还可以阻止目标执行别的注册事件
 
      ```javascript
      // 阻止事件冒泡
